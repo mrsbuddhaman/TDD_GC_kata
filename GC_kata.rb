@@ -4,7 +4,7 @@ def greene_county
 		if value % 3 == 0
 			our_array[index_position] = "greene"		
 		end
-		if value == 5
+		if value % 5 == 0
 			our_array[index_position] = "county"
 		end
 	end
