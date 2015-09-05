@@ -18,17 +18,6 @@ class GC_kata_test < Minitest::Test
 		assert_equal(2, results[1])
 	end
 	
-	def test_third_element_in_array_is_greene
-		results = greene_county
-		assert_equal("greene", results[2])
-	end
-	
-	def test_if_element_mod_3_and_mod_5_is_greene_county
-		results = greene_county
-		assert_equal("greene county", results[14])
-		assert_equal("greene county", results[89])
-	end
-	
 	def test_if_element_mod_3_is_greene
 		results = greene_county
 		assert_equal("greene", results[-2])
@@ -44,5 +33,11 @@ class GC_kata_test < Minitest::Test
 		results = greene_county
 		assert_equal("county", results[9])
 		assert_equal("county", results[49])
+	end
+	
+	def test_if_element_mod_3_and_mod_5_is_greene_county
+		results = greene_county
+		assert_equal("greene county", results[14])
+		assert_equal("greene county", results[89])
 	end
 end
