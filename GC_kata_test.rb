@@ -38,4 +38,10 @@ class GC_kata_test < Minitest::Test
 		results = greene_county	
 		assert_equal("county", results[4])
 		end
+	
+	def test_if_element_mod_5
+		results = greene_county
+		assert_equal("county", results[9])
+		assert_equal("county", results[49])
+		end
 end
