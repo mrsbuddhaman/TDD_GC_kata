@@ -1,13 +1,19 @@
 def coin_changer( cents )
 
-	coins = {penny: 1, nickel: 5, dime: 10, quarter: 25}
-		if cents == 1
-		change = {penny:1, nickel:0, dime:0, quarter:0}
-		elsif cents == 5
-		change = {penny:0, nickel:1, dime:0, quarter:0}
-		elsif cents == 10
-		change = {penny:0, nickel:0, dime:1, quarter:0}
-		else cents == 25
-		change = {penny:0, nickel:0, dime:0, quarter:1}
+	change = {quarter: 0, dime: 0, nickel: 0, penny: 0}
+	coin_value = {quarter: 25, dime: 10, nickel: 5, penny: 1}
+		
+		coin_value.each do |coin, value|
+			if 
+				value == cents
+				change[coin] += 1 
+				cents = cents - value
+			elsif
+				value < cents
+				change[coin] += 1
+				cents = cents - value
+		
+			end
 		end
+	change	
 end
