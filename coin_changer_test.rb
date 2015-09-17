@@ -36,9 +36,16 @@ class Coin_Changer_test < Minitest::Test
 	def test_for_68_cents
 		assert_equal({penny: 3, nickel: 1, dime: 1, quarter: 2}, coin_changer(68))
 	end
+	
 
-
-
+	def test_for_73_cents
+		assert_equal({penny: 3, nickel: 0, dime: 2, quarter: 2}, coin_changer(73))
+	end
+	
+	
+	def test_for_65_cents
+		assert_equal({penny: 0, nickel: 1, dime: 1, quarter: 2}, coin_changer(65))
+	end
 
 
 
